@@ -18,7 +18,40 @@
   font-size: large;
 }
 
+.Road {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 20px 0;
+  min-height: 120px;
+  background: #ddd;
+  text-align: left;
+}
+
+.Car {
+  display: block;
+  position: relative;
+  left: -70px;
+  height: 40px;
+  animation: Car-left infinite 7s linear;
+}
+
+.Car-back {
+  transform: rotate(-180deg);
+  animation: Car-right infinite 7s linear;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+@keyframes Car-left {
+  from { transform: translate(0,0); }
+  to { transform: translate(1220px,0); }
+}
+
+@keyframes Car-right {
+  from { transform: translate(1220px,0); }
+  to { transform: translate(0,0); }
 }
